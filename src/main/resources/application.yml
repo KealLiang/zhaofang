@@ -1,0 +1,52 @@
+spring:
+  # 默认使用-dev的配置
+  profiles:
+    active: dev
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  session:
+    store-type: none
+  thymeleaf:
+    mode: HTML
+  # multipart config
+  servlet:
+    multipart:
+      enabled: true
+      location: D:\coding\core-hr\zhaofang\temp
+      max-file-size: 5MB
+      max-request-size: 10MB
+# kafka
+  kafka:
+    bootstrap-servers: '192.168.247.129:9092'
+    consumer:
+      group-id: 'zhaofang'
+      auto-offset-reset: earliest
+# log
+logging:
+  level:
+    org.hibernate.SQL: debug
+# 禁止自动生成错误页
+server:
+  error:
+    whitelabel:
+      enabled: false
+auth:
+  pattern:
+    publicPattern:
+      - '/admin/login'
+      - '/user/login'
+      - '/static/**'
+    adminPattern:
+      - '/admin/**'
+    loginPattern:
+      - '/user/**'
+      - '/api/user/**'
+# 七牛云上传配置
+
+# ES配置
+elasticsearch:
+  master:
+    addr: '192.168.247.129'
+    port: 9300

@@ -1,0 +1,11 @@
+# test中使用内存数据库H2spring:
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    # 连接url使用内存模式
+    jdbc-url: jdbc:h2:mem:test
+    # 指定schema与data
+    schema:
+      - classpath:db/schema.sql
+    data:
+      - classpath:db/data.sql

@@ -1,0 +1,95 @@
+{
+  "settings": {
+    "number_of_replicas": 0
+  },
+  "mappings": {
+    "house": {
+      "dynamic": false,
+      "properties": {
+        "houseId": {
+          "type": "long"
+        },
+        "title": {
+          "type": "text",
+          "index": "true",
+          "analyzer": "ik_max_word",
+          "search_analyzer": "ik_max_word"
+        },
+        "price": {
+          "type": "integer"
+        },
+        "area": {
+          "type": "integer"
+        },
+        "createTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "lastUpdateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "cityEnName": {
+          "type": "text"
+        },
+        "regionEnName": {
+          "type": "keyword"
+        },
+        "direction": {
+          "type": "integer"
+        },
+        "subwayLineName": {
+          "type": "keyword"
+        },
+        "subwayStationName":{
+          "type": "keyword"
+        },
+        "tags": {
+          "type": "text"
+        },
+        "distanceToSubway": {
+          "type": "integer"
+        },
+        "street": {
+          "type": "keyword"
+        },
+        "district": {
+          "type": "keyword"
+        },
+        "description": {
+          "type": "text",
+          "index": "true",
+          "analyzer": "ik_smart",
+          "search_analyzer": "ik_smart"
+        },
+        "layoutDesc": {
+          "type": "text",
+          "index": "true",
+          "analyzer": "ik_smart",
+          "search_analyzer": "ik_smart"
+        },
+        "traffic": {
+          "type": "text",
+          "index": "true",
+          "analyzer": "ik_smart",
+          "search_analyzer": "ik_smart"
+        },
+        "roundService": {
+          "type": "text",
+          "index": "true",
+          "analyzer": "ik_smart",
+          "search_analyzer": "ik_smart"
+        },
+        "rentWay": {
+          "type": "integer"
+        },
+        "suggest": {
+          "type": "completion" // 设置为completion才能被suggest捕获
+        },
+        "location": {
+          "type": "geo_point" // 地理位置
+        }
+      }
+    }
+  }
+}

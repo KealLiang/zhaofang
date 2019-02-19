@@ -1,0 +1,15 @@
+# dev环境的db config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://127.0.0.1:3306/zhaofang?serverTimezone=Asia/Shanghai
+    username: root
+    password: 'root'
+  # thymeleaf缓存
+  thymeleaf:
+    cache: false
+    prefix: 'classpath:/templates/'
+    suffix: '.html'
+logging:
+  level:
+    com.kealliang.service: debug
