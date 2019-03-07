@@ -26,7 +26,7 @@ import java.util.HashMap;
  * @author lsr
  * @ClassName QiniuServiceImpl
  * @Date 2019-02-01
- * @Desc
+ * @Desc 云服务文件管理
  * @Vertion 1.0
  */
 @Service

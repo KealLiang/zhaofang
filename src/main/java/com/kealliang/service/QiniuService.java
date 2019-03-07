@@ -14,6 +14,14 @@ import java.io.InputStream;
  */
 public interface QiniuService {
 
+    /**
+     * 七牛云文件上传
+     * @author lsr
+     * @description upload
+     * @Date 0:06 2019/3/8
+     * @Param [file]
+     * @return com.qiniu.http.Response
+     */
     Response upload(File file);
 
     Response upload(InputStream inputStream);
